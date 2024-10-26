@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        body {
+            font-family: Roboto, sans-serif;
+        }
+
+        
+        .container {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            align-items: center;
+            margin: 0 auto;
+            padding-top: 150px;
+        }
+
+        .boton {
+            width: 100px;
+            border-radius: 3px;
+            background-color: rgb(139, 139, 245);
+            color: white;
+            border: none;
+        }
+
+        p {
+            padding: 20px;
+        }
+
+    </style>
+    <div class="container">
+        <h2>Ingresa la password</h2>
+        <div class="selectores">
+            <select id="select1" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="select2" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="select3" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        
+        
+        <button class="boton" onclick="
+
+            select1 = document.querySelector('#select1').value
+            select2 = document.querySelector('#select2').value
+            select3 = document.querySelector('#select3').value
+
+            password = select1 + select2 + select3
+            resultado = document.querySelector('.resultado')
+
+            if(password === '911'){
+                resultado.innerHTML = 'la password 1 es correcta'
+            } else if(password === '741'){
+                resultado.innerHTML = 'la password 2 es correcta'
+            } else{
+                resultado.innerHTML = 'la password es incorrecta'
+            }
+        
+        ">Ingresar</button>
+        <p class="resultado"></p>
+
+
+    </div>
+    
+<script src="js.js"></script>   
+</body>
+</html>
